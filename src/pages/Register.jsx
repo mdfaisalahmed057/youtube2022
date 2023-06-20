@@ -7,6 +7,7 @@ import Add from "../img/add.png"
 import { doc, setDoc } from "firebase/firestore";
 import { useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
+
 const Register = () => {
     const [err, setErr] = useState(false);
     const [loading, setLoading] = useState(false);
@@ -69,12 +70,14 @@ return (
         <input required type="text" placeholder="display name" />
         <input required type="email" placeholder="email" />
         <input required type="password" placeholder="password" />
-        <input required style={{ display: "none" }} type="file" id="file" />
+        <input required style={{ display: "none" }}   id="file" />
         <label htmlFor="file">
             <img src={Add} alt="" />
             <span>Add an avatar</span>
         </label>
+        
         <button  >Sign up</button>
+
         {loading&& "loading"}
          <p>
             You do have an account? <Link to="/login">Login</Link> 

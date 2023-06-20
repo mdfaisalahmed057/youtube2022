@@ -23,7 +23,6 @@ const unSub=onSnapshot(doc(db,"chats",data.chatId),(doc)=>{
     <div className='messages'>
       {message.map(m=>(
       <Message message={m}  key={m.id}/>
-
       ))}
     </div>
   )
