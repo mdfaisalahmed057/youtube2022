@@ -1,8 +1,13 @@
-import mysql from "mysql"
+import mysql2 from "mysql2"
 
-export const db = mysql.createConnection({
+export const db = mysql2.createConnection({
   host:"localhost",
   user:"root",
-  password: process.env.DB_KEY,
+  password:"Faisal@123",
   database:"blog"
 })
+if(!db){
+  console.log("error")
+}else{
+console.log("success")
+}

@@ -4,8 +4,16 @@ import userRoutes from "./routes/users.js";
 import postRoutes from "./routes/posts.js";
 import cookieParser from "cookie-parser";
 import multer from "multer";
+import { db } from "./db.js";
+ const app = express();
 
-const app = express();
+// app.get('/pp',(req,res)=>{
+//   const q="select*from posts"
+//   db.query(q,(err,data)=>{
+//     if(err) return res.send(err)
+//     return res.send(data)
+//   })
+// })
 
 app.use(express.json());
 app.use(cookieParser());
