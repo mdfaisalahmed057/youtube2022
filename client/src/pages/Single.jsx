@@ -16,6 +16,7 @@ const Single = () => {
   const navigate = useNavigate();
 
   const postId = location.pathname.split("/")[2];
+  console.log(postId)
 
   const { currentUser } = useContext(AuthContext);
 
